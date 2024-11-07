@@ -1,11 +1,18 @@
 <script setup>
 import { UserFilled, Message } from '@element-plus/icons-vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+/* 路由跳转 返回首页 */
+const goToHome = () => {
+    router.push('/teaHome')
+}
 </script>
 
 <template>
 <div class="head">
     <div class="top">
-        <img src="D:\WebFrontEnd\vue3\Bofei\Bofei\src\components\icons\bosiLogo.png" alt="bosiLogo">
+        <img src="D:\WebFrontEnd\vue3\Bofei\Bofei\src\components\icons\bosiLogo.png" alt="bosiLogo" @click="goToHome" />
         <ul class="menu">
             <li>工作台</li>
             <li>教学资源</li>
@@ -33,7 +40,6 @@ import { UserFilled, Message } from '@element-plus/icons-vue'
             </template>
         </el-dropdown>    
     </div>
-    
 </div>
 </template>
 
@@ -45,6 +51,7 @@ import { UserFilled, Message } from '@element-plus/icons-vue'
     background-color: #023981;
     height: 60px;
     width: 100%;
+    padding: 0;
 }
 .top {
     display: flex;
