@@ -12,7 +12,7 @@ const goToHome = () => {
 <template>
 <div class="head">
     <div class="top">
-        <img src="D:\WebFrontEnd\vue3\Bofei\Bofei\src\components\icons\bosiLogo.png" alt="bosiLogo" @click="goToHome" />
+        <img src="@/assets/images/bosiLogo.png" alt="bosiLogo" @click="goToHome" />
         <ul class="menu">
             <li>工作台</li>
             <li>教学资源</li>

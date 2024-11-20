@@ -12,7 +12,7 @@
             <span style="color: #bdbdbd;font-size: small;">Copyright © 2008-2023.（V3.7.2）科大讯飞教育</span>
         </div>
         <div class="code-right">
-            <img src="D:\WebFrontEnd\vue3\Bofei\Bofei\src\components\icons\erweima.png" alt="code">
+            <img src="@/assets/images/erweima.png" alt="code">
         </div>
     </div>
 </div>

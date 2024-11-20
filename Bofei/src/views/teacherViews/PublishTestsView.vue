@@ -12,7 +12,7 @@ import Footer from '@/components/footer.vue';
 
         <el-main class="main">
             <div class="top-background">
-                <img src="D:\WebFrontEnd\vue3\Bofei\Bofei\src\components\icons\class-cover.png" alt="" class="image" />
+                <img src="@/assets/images/class-cover.png" alt="" class="image" />
             </div>
 
         </el-main>

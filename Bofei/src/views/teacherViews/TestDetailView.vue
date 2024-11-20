@@ -27,7 +27,7 @@ const test = ref({
                 <div class="top">
                     <!-- 左侧测试题图标 -->
                     <div class="left-icon">
-                        <img src="@/components/icons/test.png" alt="">
+                        <img src="@/assets/images/test.png" alt="">
                     </div>
 
                     <!-- 右侧测试题信息 -->
@@ -79,7 +79,7 @@ const test = ref({
                     </div>
 
                     <div class="statistical-chart">
-                        <img src="@/components/icons/chart.png" alt="">
+                        <img src="@/assets/images/chart.png" alt="">
                     </div>
                 </div>
             </div>

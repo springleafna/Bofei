@@ -1,15 +1,40 @@
 <script setup>
 import { ref } from 'vue'
+import axios from 'axios'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 const username = ref('')
 const password = ref('')
 const remember = ref(false)
+
+const login = () =>{
+  axios.post('/api/login', {
+    username: username.value,
+    password: password.value,})
+   .then(response => {
+        console.log(response)
+        if (response.data.code === 0) {
+            // 登录成功
+            // 跳转到首页
+            router.push('/teahome')
+        } else {
+            // 登录失败
+            alert('登录失败，请检查用户名或密码')
+        }
+    })
+   .catch(error => {
+        console.log(error)
+    })
+} 
+
 
 </script>
 
 <template>
     <div class="container">
         <div class="left">
-            <img src="D:\WebFrontEnd\vue3\Bofei\Bofei\src\components\icons\loginBac.png" alt="background" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="@/assets/images/loginBac.png" alt="background" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
         <div class="right">
             <div class="login-container">
@@ -29,7 +54,7 @@ const remember = ref(false)
                                 <el-checkbox v-model="remember" label="记住我" size="large" />
                             </div>
                         </div>
-                        <button type="submit" class="login-button">登录</button>
+                        <button class="login-button" @click.prevent="login">登录</button>
                     </form>
                     <p class="footer">
                         没有账户? <a href="#">注册</a>

@@ -8,6 +8,11 @@ const router = createRouter({
       name: 'LoginView',
       component: () => import('../views/LoginView.vue')
     },
+    { /* 登录页面 */
+      path: '/',
+      name: 'LoginView',
+      component: () => import('../views/LoginView.vue')
+    },
     {
       path: '/',
       name: 'LoginView',
@@ -33,11 +38,7 @@ const router = createRouter({
       name: 'PublishTests',
       component: () => import('../views/teacherViews/PublishTestsView.vue')
     },
-    { /* 测试 */
-      path: '/test',
-      name: 'Test',
-      component: () => import('../components/MessageBoard.vue')
-    },
+
   ]
 })
 
